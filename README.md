@@ -1,2 +1,2 @@
 # frabit-server
-A dispatcher for frabit toolkit
+A remote orchestrator for frabit via gRPC
