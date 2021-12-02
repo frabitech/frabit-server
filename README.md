@@ -7,5 +7,4 @@
 [![pypi](https://img.shields.io/pypi/v/frabit)](https://github.com/blylei/frabit/releases)
 [![Upload Python Package](https://github.com/blylei/frabit/actions/workflows/python-publish.yml/badge.svg)](https://github.com/blylei/frabit/actions/workflows/python-publish.yml)
 
-
 A remote orchestrator for frabit via gRPC
