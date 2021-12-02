@@ -53,7 +53,7 @@ setup(
     packages=find_packages(exclude=["tests"]),
     entry_points={
         'console_scripts': [
-            'frabit-server=frabit.cli:main',
+            'frabitd=frabit.cli:main',
         ],
     },
     license='GPL-3.0',
