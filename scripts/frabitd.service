@@ -1,0 +1,19 @@
+[Unit]
+Description=frabitd
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=frabit
+Group=frabit
+LimitNOFILE=65535
+LimitNPROC=65535
+TasksMax=infinity
+PIDFile=/usr/run/frabitd.pid
+WorkingDirectory=
+ExecStart=/usr/bin/frabitd -c /etc/frabitd/frabitd.cnf
+RestartSec=5
+Restart=on-failure
+KillMode=process
