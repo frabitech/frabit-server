@@ -41,7 +41,7 @@ if sys.version_info < (2, 7):
         ]
 
 frabit = {}
-with open('lib/version.py', 'r') as version:
+with open('frabitd/version.py', 'r') as version:
     exec(version.read(), frabit)
 
 setup(
