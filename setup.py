@@ -41,20 +41,19 @@ if sys.version_info < (2, 7):
         ]
 
 frabit = {}
-with open('frabit/version.py', 'r') as version:
+with open('lib/version.py', 'r') as version:
     exec(version.read(), frabit)
 
 setup(
-    name='frabit',
+    name='frabit-server',
     version=frabit['__version__'],
-    author='blylei Limited',
+    author='FrabiTech Limited',
     author_email='blylei.info@gmail.com',
-    url='https://github.com/blylei/frabit',
+    url='hhttps://github.com/frabitech/frabit-server',
     packages=find_packages(exclude=["tests"]),
     entry_points={
         'console_scripts': [
-            'frabit=frabit.cli:main',
-            'frabit-rpc=frabit.cli_rpc:main',
+            'frabit-server=frabit.cli:main',
         ],
     },
     license='GPL-3.0',
