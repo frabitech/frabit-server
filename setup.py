@@ -49,7 +49,7 @@ setup(
     version=frabit['__version__'],
     author='FrabiTech Limited',
     author_email='blylei.info@gmail.com',
-    url='hhttps://github.com/frabitech/frabit-server',
+    url='https://github.com/frabitech/frabit-server',
     packages=find_packages(exclude=["tests"]),
     entry_points={
         'console_scripts': [
