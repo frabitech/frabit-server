@@ -6,5 +6,3 @@
 """
 This module contains the current frabit-server version.
 """
-
-__version__ = '2.0.2'
