@@ -145,3 +145,51 @@ class ProcessManager(object):
         _logger.debug("The PID %s has not been terminated after %s retries",
                       process_info.pid, retries)
         return False
+
+    def start(self, process_info, retries=10):
+        """
+        Kill a process
+
+        Returns True if killed successfully False otherwise
+
+        :param ProcessInfo process_info: representation of the process
+            we want to kill
+        :param int retries: number of times the method will check
+            if the process is still alive
+        :rtype: bool
+        """
+        # Try to kill the process
+        try:
+            _logger.debug("Sending SIGINT to PID %s", process_info.pid)
+            os.kill(process_info.pid, signal.SIGINT)
+            _logger.debug("os.kill call succeeded")
+        except OSError as e:
+            _logger.debug("os.kill call failed: %s", e)
+            # The process doesn't exists. It has probably just terminated.
+            if e.errno == errno.ESRCH:
+                return True
+            # Something unexpected has happened
+            output.error("%s", e)
+            return False
+        # Check if the process have been killed. the fastest (and maybe safest)
+        # way is to send a kill with 0 as signal.
+        # If the method returns an OSError exceptions, the process have been
+        # killed successfully, otherwise is still alive.
+        for counter in range(retries):
+            try:
+                _logger.debug("Checking with SIG_DFL if PID %s is still alive",
+                              process_info.pid)
+                os.kill(process_info.pid, signal.SIG_DFL)
+                _logger.debug("os.kill call succeeded")
+            except OSError as e:
+                _logger.debug("os.kill call failed: %s", e)
+                # If the process doesn't exists, we are done.
+                if e.errno == errno.ESRCH:
+                    return True
+                # Something unexpected has happened
+                output.error("%s", e)
+                return False
+            time.sleep(1)
+        _logger.debug("The PID %s has not been terminated after %s retries",
+                      process_info.pid, retries)
+        return False
