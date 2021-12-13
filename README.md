@@ -7,7 +7,7 @@
 [![pypi](https://img.shields.io/pypi/v/frabit)](https://github.com/frabitech/frabit-server/releases)
 [![Upload Python Package](https://github.com/frabitech/frabit/actions/workflows/python-publish.yml/badge.svg)](https://github.com/frabitech/frabit-server/actions/workflows/python-publish.yml)
 
-A remote orchestrator for frabit via gRPC
+A remote orchestrator for frabit via gRPC. The core part of frabit stack.
 
 ## 部署
 
