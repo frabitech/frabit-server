@@ -11,17 +11,19 @@ import re
 import logging
 
 import frabitd
+from frabitd.process import ProcessManager
 
 
 _logger = logging.getLogger(__name__)
 
 
-class Scanner():
+class Scanner:
     """
-    doc
+    add doc here
     """
-    def __init__(self):
-        pass
+    def __init__(self, config):
+        self.config = config
+        self.process_manager = ProcessManager(self.config)
 
     def process(self):
         pass
