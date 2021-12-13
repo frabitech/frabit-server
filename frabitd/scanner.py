@@ -12,7 +12,7 @@ import logging
 
 import frabitd
 from frabitd.process import ProcessManager
-
+from frabitd.exceptions import ProcessException
 
 _logger = logging.getLogger(__name__)
 

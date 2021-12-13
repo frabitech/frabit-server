@@ -30,7 +30,7 @@ class CompressionException(FrabitdException):
     """
 
 
-class PostgresException(FrabitdException):
+class ProcessException(FrabitdException):
     """
     Base exception for all the errors related to PostgreSQL.
     """
