@@ -7,7 +7,7 @@
 [![pypi](https://img.shields.io/pypi/v/frabit-server)](https://github.com/frabitech/frabit-server/releases)
 [![Upload Python Package](https://github.com/frabitech/frabit-server/actions/workflows/python-publish.yml/badge.svg)](https://github.com/frabitech/frabit-server/actions/workflows/python-publish.yml)
 
-通过gRPC协议远程操作frabit的编排器，也是frabit系列的核心组件
+# 一个通过gRPC协议远程操作frabit的编排器，也是frabit系列的核心组件
 ## 部署
 
  - 源码获取
