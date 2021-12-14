@@ -17,29 +17,23 @@
   ```
 
 
- - 源码获取
+ - 源码安装
    ```bash
+   # 从github下载源码
    shell> git clone https://github.com/frabitech/frabit-server.git
-   ```
    
- - 创建虚拟环境 
-   ```bash
+   # 创建虚拟环境 
    shell> virtualenv venv
    shell> source venv/bin/activate
    (ven) shell>
-   ```
- - 安装依赖
-   ```bash
+   # 安装依赖
    (ven) shell> pip install -r requirements.txt 
-   ```
- - 修改配置文件
-   ```bash
+   # 修改配置文件
    (ven) shell> vim /etc/frabitd.cnf
-   ```
- - 启动服务
-   ```bash
+   # 启动服务
    (ven) shell> start.sh
    ```
+
 
 ## 功能
 
