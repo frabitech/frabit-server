@@ -9,6 +9,14 @@
 ## 一个通过gRPC协议远程操作frabit的编排器，也是frabit系列的核心组件
 ## 部署
 
+- **pip安装(推荐)**
+  ```bash
+  shell> pip install frabit-server 
+  or
+  shell> pip3 install frabit-server 
+  ```
+
+
  - 源码获取
    ```bash
    shell> git clone https://github.com/frabitech/frabit-server.git
